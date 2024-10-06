@@ -2,6 +2,7 @@ import { Coin, MAX_QTY_INSTALLMENTS, Product } from "@/core";
 import Link from "next/link";
 import Image from "next/image";
 import { IconShoppingCartPlus } from "@tabler/icons-react";
+import ScoreReview from "../shared/ScoreReview";
 
 export  interface ProductItemProps {
     product:Product;
@@ -11,10 +12,13 @@ export default function ProductItem(props:ProductItemProps) {
     const { product } = props; 
     return (    
         <Link
-            href={`/product/${props.product.id}`}
+            href={`/product/${product.id}`}
             className="flex flex-col bg-violet-dark border border-white/10 rounded-xl"
         >
             <div className="w-full h-48 relative">
+                <div className="absolute flex justify-end top-2.5 right-2.5">    
+                    <ScoreReview score={ product.score } />
+                </div>
                 <Image 
                     src={ product.image }
                     fill
