@@ -1,9 +1,6 @@
-import products from "./products";
+import produtos from './produtos'
 
-const MAX_QTY_INSTALLMENTS:number = 12;
-const MONTHLY_INTEREST_RATE:number = 0.0167;
+const QTDE_MAX_PARCELAS = 12
+const TAXA_JUROS_MENSAL = 0.0167
 
-export { MAX_QTY_INSTALLMENTS, MONTHLY_INTEREST_RATE, products };
-
-
-
+export { produtos, QTDE_MAX_PARCELAS, TAXA_JUROS_MENSAL }
